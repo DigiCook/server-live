@@ -10,14 +10,13 @@ class Db {
   constructor() {
     const port: any = process.env.DATABASE_PORT;
 
-    this.sequelize = new Sequelize(process.env.DATABASE_DB_NAME,
+    this.sequelize = new Sequelize.Sequelize(process.env.DATABASE_DB_NAME,
       process.env.DATABASE_USERNAME,
       process.env.DATABASE_PASSWORD,
       {
         host: process.env.DATABASE_HOST,
         port,
-        dialect: process.env.DATABASE_DIALECT,
-        operatorsAliases: false,
+        dialect: process.env.DATABASE_DIALECT as any,
         pool: {
           max: 5,
           min: 0,
