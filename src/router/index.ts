@@ -1,7 +1,7 @@
-import { TaskController } from "../controllers/TaskController";
+import { LiveController } from "../controllers/LiveController";
 
 export function load(app) {
-  // Task Routes
-  app.route("/api/task")
-    .get(TaskController.getAll);
+  // Live route
+  app.route("/api/live")
+    .get(LiveController.publish);
 }

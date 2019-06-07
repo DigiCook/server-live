@@ -3,7 +3,6 @@ import cors = require("cors");
 import dotenv = require("dotenv");
 import express = require("express");
 import router = require("./router");
-import sequelize = require("./services/sequelize");
 
 dotenv.config();
 const port = process.env.PORT || 4000;
@@ -13,9 +12,6 @@ if (typeof(PhusionPassenger) !== "undefined") {
   // @ts-ignore
   PhusionPassenger.configure({ autoInstall: false });
 }
-
-// Init Sequelize.
-sequelize.getInstance();
 
 const app = express();
 

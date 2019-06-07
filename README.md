@@ -1,16 +1,14 @@
-# NodeJS server with Sequelize
+# Serveur pour gérer le Live
 
-## Usage
+## Utilisation
 ``` bash
-# Install dependences.
+# Installation des dependences npm.
 npm install
-# Create all tables in the DataBase.
-npm run createTables
-# Create all tables in the DataBase and load data test.
-npm run load
 
-# Run the server for development.
+# Lancer le serveur en development.
 npm run dev
-# Build the server for production.
+# Build le server pour la production
 npm run build
+# Lancer le server en production
+npm run start
 ```
